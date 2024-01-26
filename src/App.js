@@ -1,11 +1,12 @@
+import CalendarComponent from "./components/CalendarComponent";
 import Headers from "./components/headers";
 
 function App() {
   return (
-    <>
+    <div>
       <Headers />
-      <h1>Hello, React!</h1>
-    </>
+      <CalendarComponent />
+    </div>
   );
 }
 
