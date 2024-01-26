@@ -1,0 +1,51 @@
+.calendar_main_div{
+    display: flex;
+    flex-direction: row;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    min-width: 928px;
+    min-height: 430px;
+    z-index: 100;
+    position: relative;
+    box-shadow: 0 2px 4px rgb(112, 100, 100);
+}
+
+.calendar{
+    background-color: #EBEBF0;;
+    padding: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    max-width: calc(100% - 190px); 
+    z-index: 101; /* Set a higher z-index than the background */
+  position: relative; 
+}
+
+.calendar_body{
+    margin: 30px 0px;
+}
+
+.calendar_header{
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar_header h3{
+    margin: 0;
+}
+
+.calendar_header span{
+    margin-top: 5px;
+    font-size: small;
+    font-weight: 600;
+}
+
+.slots {
+    padding: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-width: calc(100% - 190px);
+    background-color: white;
+    z-index: 102; /* Set a higher z-index than the calendar */
+    position: relative;
+    width: 100%;
+}
