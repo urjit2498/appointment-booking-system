@@ -1,9 +1,11 @@
+import Headers from "./components/headers";
 
 function App() {
   return (
-    <div className="App">
-      Appointment booking system
-    </div>
+    <>
+      <Headers />
+      <h1>Hello, React!</h1>
+    </>
   );
 }
 
