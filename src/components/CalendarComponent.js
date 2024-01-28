@@ -64,7 +64,7 @@ const CalendarComponent = () => {
         </div>
         <div className="slots">
           <h3>Available Slots</h3>
-          {date.length > 0 ? (
+          {date.length > 0 && formatedDate(date[0].toDateString()) !== formatedDate(date[1].toDateString())  ? (
             <p className="text-center">
               <span className="bold">Start:</span>{" "}
               {formatedDate(date[0].toDateString())}
@@ -74,8 +74,8 @@ const CalendarComponent = () => {
             </p>
           ) : (
             <p className="text-center">
-              <span className="bold">Default selected date:</span>{" "}
-              {date.toDateString()}
+              <span className="bold">Selected date:</span>{" "}
+              {formatedDate(date[0].toDateString())}
             </p>
           )}
 
