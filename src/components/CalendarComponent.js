@@ -29,7 +29,7 @@ const CalendarComponent = () => {
         formatedDate(date[1]?.toDateString())
       )
     );
-  }, [date]);
+  }, [date, dispatch]);
 
   const handleSlotClick = (index) => {
     setSelectedSlotIndex(index);
