@@ -1,0 +1,27 @@
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .error-box {
+    border: 1px solid #e74c3c; /* Red color for border */
+    padding: 20px 100px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f8d7da; /* Light red color for background */
+  }
+  
+  .error-icon {
+    font-size: 80px;
+    color: #721c24; /* Dark red color for icon */
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    color: #721c24; /* Dark red color for text */
+    font-size: 16px;
+    margin: 0;
+  }
+  
