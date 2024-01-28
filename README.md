@@ -1,6 +1,9 @@
 # appointment-booking-system
 Appointment booking system developed in React JS, Redux and API integration.
 
+## Implementation designs
+<img src="src\assets\AppointoAppDesign.svg"/>
+
 ## Set up the project
 
 ### `npm i`
