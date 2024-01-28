@@ -6,7 +6,11 @@ import { getTimeSlots } from "../API/getTimeSlots";
 import LoadingComponent from "./LoadingComponent";
 import { ReactComponent as CheckCircle } from "../assets/circle-check.svg";
 import ConfirmationModal from "./ConfirmationModal";
+import { useDispatch, useSelector } from "react-redux";
+import { getSlots } from "../action/slotActions";
 const CalendarComponent = () => {
+  const slotsData = useSelector((state) => state);
+  const dispatch = useDispatch();
   const currentDate = new Date();
   const [date, setDate] = useState([
     currentDate,
@@ -16,35 +20,28 @@ const CalendarComponent = () => {
       currentDate.getDate() + 9
     ),
   ]);
-  const [slots, setSlots] = useState([]);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedSlotIndex, setSelectedSlotIndex] = useState(null);
 
-  const getSlots = () => {
-    const data = getTimeSlots(
-      formatedDate(date[0]?.toDateString()),
-      formatedDate(date[1]?.toDateString())
-    );
-    data.then((res) => {
-      setSlots(res.data);
-    });
-  };
-
   useEffect(() => {
-    getSlots();
+    dispatch(
+      getSlots(
+        formatedDate(date[0]?.toDateString()),
+        formatedDate(date[1]?.toDateString())
+      )
+    );
   }, [date]);
-
 
   const handleSlotClick = (index) => {
     setSelectedSlotIndex(index);
   };
-  
+
   const handleConfirm = () => {
-    console.log('Confirmed');
+    console.log("Confirmed");
     setModalOpen(false);
   };
   const handleCancel = () => {
-    console.log('Cancelled');
+    console.log("Cancelled");
     setSelectedSlotIndex(null);
     setModalOpen(false);
   };
@@ -84,8 +81,8 @@ const CalendarComponent = () => {
           )}
 
           <div className="available_slots">
-            {slots?.length > 0 ? (
-              slots
+            {slotsData?.slots?.length > 0 ? (
+              slotsData?.slots
                 .filter((slot) => {
                   return slot.date === formatedDate(date[0].toDateString());
                 })
