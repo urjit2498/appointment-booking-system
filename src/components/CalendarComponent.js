@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../styles/Calendar.css";
 import Calendar from "react-calendar";
 import { formatedDate, formattedHour } from "../utils/helper";
-import { getTimeSlots } from "../API/getTimeSlots";
 import LoadingComponent from "./LoadingComponent";
 import { ReactComponent as CheckCircle } from "../assets/circle-check.svg";
 import ConfirmationModal from "./ConfirmationModal";
