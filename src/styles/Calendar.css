@@ -237,7 +237,8 @@
 .available_slots {
   align-items: center;
   justify-content: center;
-  max-height: calc(100vh - 459px);
+  max-height: 30vh;
+  height: auto;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #378760 #f4f4f4;
